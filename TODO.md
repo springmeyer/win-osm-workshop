@@ -12,7 +12,6 @@
 
 * add a sub-tutorial about how to handle windows defender issues (svhost.exe using all CPU scanning new installers added and locking up the system) - how to detect and disable/kill to allow the machine to not be sluggish.
 
-* add a sub-tutorial
 * test using normal user for running postgres (rather than postgres user) - update docs if it works
 
 * tutorial needs writeup: tilemill csv tutorial
