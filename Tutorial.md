@@ -18,6 +18,19 @@ We choose these tools mainly because they have easy installers for windows. But,
 1. Appendices
 1. References
 
+## Design decisions
+
+Advanced users may ask "why not use the 'OpenStreetMap' plugin for QGIS?" instead of the approach detailed below that recommends `osm2pgsql` to import OSM data into PostGIS using the 'OSM Tools' plugin.
+
+The reasons are:
+
+ * The authors have found the 'OpenStreetMap' plugin quite unstable/buggy (hopefully this is fixed now)
+ * osm2pgsql supports importing custom tags (through the use of a style file), which is critical for humanitarian and other uses of OSM data that leverage custom tags
+ * osm2pgsql is the main tool to import OSM data by the most users worldwide, so using its schema can be beneficial, for example to work with style templates like: https://github.com/mapbox/osm-bright
+ * imposm is another great, widely used tool, but it does not (at this time) work on windows
+
+Advanced users may ask "why not use some command line tools like ogr2ogr and gdal_translate"? These are great tools, but we aim for avoiding any command line usage in this tutorial. If/when this tutorial demands their functionality, we'll use them through the QGIS interface.
+
 
 # Installing the Tools
 
