@@ -201,15 +201,16 @@ This step is just to test PostGIS is functioning okay for QGIS.
 1. Go to Layers > Add PostGIS Layers...
 1. Click "New"
 1. Then in the connections window type:
+
 ```
-Name: OSM
-Service: leave blank
-Host: leave blank
-Port: 5432
-Database: osm
-SSL mode: leave as "disable"
-Username: postgres
-Password: osm
+  Name: OSM  
+  Service: leave blank  
+  Host: leave blank  
+  Port: 5432  
+  Database: osm  
+  SSL mode: leave as "disable"  
+  Username: postgres  
+  Password: osm
 ```
 1. Check "Save Username"
 1. Check "Save Password"
