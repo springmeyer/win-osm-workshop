@@ -1,8 +1,18 @@
+* make note about passwords and security  - how tutorial is intentionally not secure and some machines may have a security policy that makes it impossible to use short passwords, and that users should be able to use whatever password they wish.
 
-* usb keys with installers/data (wget from s3)
+* note that updated java is apparently required to run the postgres stackbuilder
 
-* edit pass to describe the creation of an osm_template db (with all the patched stuff for osm2pgsql), and the instructions for how to create new import database from that, as a template.
+* edit tutorial to describe the creation of an osm_template db (with all the patched stuff for osm2pgsql), and the instructions for how to create new import database from that, as a template.
 
+* add details about whether installers upgrade, overwrite, or install standalone when other versions exist. Also add details about what to do with two postgres versions on different ports.
+
+* add details to tutorial to troubleshoot/avoid the common problem of a user trying to connect to a database in QGIS that does not exist (because they did not realize QGIS cannot create them, and rather they need to create in pgadminIII first)
+
+* fix the OSM Tools plugin to catch the condition of a QGIS database being requested that does not actually exist yet (right now the osm2pgsql tool simply fails because an empty name is passed on the command line)
+
+* add a sub-tutorial about how to handle windows defender issues (svhost.exe using all CPU scanning new installers added and locking up the system) - how to detect and disable/kill to allow the machine to not be sluggish.
+
+* add a sub-tutorial
 * test using normal user for running postgres (rather than postgres user) - update docs if it works
 
 * tutorial needs writeup: tilemill csv tutorial
