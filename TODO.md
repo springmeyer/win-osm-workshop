@@ -15,6 +15,8 @@
 
 * document how to restart postgres via pgadmin (stop service/start service)
 
+* document using PGPASS env variable with osm2pgsql
+
 ### longer term
 
 * get latest osm2pgsql compiled on windows 
