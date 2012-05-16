@@ -398,7 +398,37 @@ Optional: import data on the command line (see Appendix H)
 1. Now you should be able to browse and query these tables of osm data just as if they were shapefiles or other tabular GIS data
 
 
+## Step 9: Load a Shapefile into PostGIS and then view from QGIS
 
+1. Go to your `\data` folder
+1. Right click on `10m-admin-0-countries.zip`
+1. Select "7-Zip > Extract files..."
+1. Click "OK"
+
+To add to your database do:
+
+1. Go to pgAdmin III
+1. Select the "osm" database
+1. Select Plugins > PostGIS Shapefile and DBF loader 2.0
+1. In the "PostGIS Shapefile..." window, click "View Connection Details" to ensure the plugin has good connectivity to the database. 
+1. On the "Import" tab, click "Add File"
+1. In the "Select a Shape File" window, navigate to the folder where you extracted the .zip file in the previous step.
+1. You should see `ne_10m_admin_0_countries.shp` - select this and click "Open"
+1. Click "Options"
+1. In the "DBF file character encoding" field, type `windows-1252` - ref: https://github.com/mapbox/tilemill/issues/547#issuecomment-1722581
+1. Click "OK"
+1. Click "Import"
+
+To view the imported shapefiles do:
+
+1. Go to QGIS
+1. Go to Layer > Add PostGIS Layer
+1. Double-check your connection to the "osm" database
+1. Click "Connect"
+1. Select the "ne_10m_admin_0_countries" table
+1. Click "Add"
+1. Click "OK" in the "Coordinate Reference System Selector Window" - it should have WGS84 highlighted already.
+1. You should now see an "ne_10m_admin_0_countries" layer in the GQIS Layers panel and a nice map of the world in the display window.
 
 
 
