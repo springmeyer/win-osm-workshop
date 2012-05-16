@@ -33,3 +33,5 @@
 * get latest osm2pgsql compiled on windows 
 
 * get osmosis version updated in QGIS "Osm Tools" plugin to work with Java 7
+
+* add support in the OSM Tools plugin for custom port
