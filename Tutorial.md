@@ -48,6 +48,7 @@ wget http://osgis-windows.s3.amazonaws.com/installers/QGIS-OSGeo4W-1.7.4-d211b16
 wget http://osgis-windows.s3.amazonaws.com/installers/TileMill-v0.9.1-Setup.exe
 wget http://osgis-windows.s3.amazonaws.com/installers/postgis_2_0_pg91.exe
 wget http://osgis-windows.s3.amazonaws.com/installers/postgresql-9.1.3-2-windows.exe
+wget http://osgis-windows.s3.amazonaws.com/installers/osm_tools.zip
 cd ../data
 wget http://osgis-windows.s3.amazonaws.com/data/10m-admin-0-countries.zip
 wget http://osgis-windows.s3.amazonaws.com/data/washington.osm.bz2
@@ -349,7 +350,7 @@ Offline Installation
 
 A file containing the OSM Tools plugin functions can be found locally:
 
-`data/osm_tools.zip`
+`installers/osm_tools.zip`
 
 1. Extract the .zip file to a local directory named `osm_tools`
 1. Copy the entire osm_tools directory to `c:\Users\[your_username]\.qgis\python\plugins\` (You may need to create the "python" and "plugins" subdirectories)
