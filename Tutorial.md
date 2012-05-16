@@ -156,7 +156,7 @@ PostGIS Install Details
 1. Click "Next" until you get to the "Database Connection" window
 1. In the "Password" field, type "osm"
 1. Click "Next"
-1. On the "Database Name" window, in the "Database Name:" field, type "osm"
+1. On the "Database Name" window, in the "Database Name:" field, type "osm" (_TODO: is this right?_)
 1. Click "Install"
 1. Click "Yes" to the "Would you like us to register the GDAL_DATA environment variable (see Appendix C), click "Yes"
 1. Click "Close" on the "Installation Complete" window.
@@ -178,9 +178,9 @@ Verify PostgreSQL and PostGIS installation success:
 1. Enter your password, "osm"
 1. The red "X" should disappear and a set of items should be listed below the "PostgresSQL" label.
 1. Click on the "+" sign next to the "Databases" icon
-1. There should be an icon with a red X labeled "osm"
-1. Click on the "+" sign next to the "osm" icon
-1. There should be an icon labeled "Extensions" below "osm"
+1. There should be an icon with a red X labeled "postgis" or something like "template_postgis" (databases created by postgis install)
+1. Click on the "+" sign next to the "postgis" icon
+1. There should be an icon labeled "Extensions"
 1. Click on the "+" sign next to the "Extensions" icon
 1. If you see the items "postgis" and "postgis_topology" listed under the extensions, congrats! PostGIS 2.0 is installed.
 
