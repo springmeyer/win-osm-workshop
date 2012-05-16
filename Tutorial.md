@@ -14,8 +14,7 @@ We choose these tools mainly because they have easy installers for windows. But,
 # Table of Contents
 
 1. Installing the Tools
-1. Using Natural Earth shapefiles
-1. Importing, filtering, and mapping with OSM data
+1. Importing OSM data
 1. Appendices
 1. References
 
@@ -349,33 +348,17 @@ A file containing the OSM Tools plugin functions can be found locally:
 1. You should now have a menu item called "OSM Tools" in your top-level QGIS menu bar.
 
 
+# Importing OSM data
 
+This workshop provides two sample osm files locally, compressed in bz2 format.
 
+See the `data/` directory for files with the `.osm.bz2` extention.
 
-
-
-
-
-
-
-
-TODO, below…..
-
-
-
-
-
-
-
-
-
-
-## Step 7: Load an OSM file into PostGIS
+## Step 1: Load an OSM file into PostGIS
 1. Open QGIS
 1. OSM Tools > Import into PostGIS (osm2pgsql)
-1. This will create another panel on the right-hand side of your GQIS window.
+1. This will create another panel on the right-hand side of your QIS window.
 1. Click "Input" to choose an .osm file (of your choosing)
-1. `data\san-juans.osm.bz2`  _**??? where should these osm files be located? Should I have downloaded anything yet?**_
 1. IGNORE the "Style" option for now.
 1. In the "Database" section, make sure "osm" is selected in the drop-down menu.
 1. Keep all other defaults
@@ -384,11 +367,11 @@ TODO, below…..
 1. There should be a green "Finished!" in the bottom window of the "Import OSM data..." panel.
 1. Unless you see an error, then the data should now be inside PostGIS  
 
+**Note:** This is a plugin written by Dane (dane@dbsgeo.com), if you have any problems email me.
+
 Optional: import data on the command line (see Appendix H)
 
-**Note:** This is a new plugin written by Dane (dane@dbsgeo.com), if you have any problems email me!
-
-## Step 8: View the PostGIS layers in the map
+## Step 2: View the PostGIS layers in the map
 1. Open QGIS
 1. Go to Layers > Add PostGIS Layer...
 1. Select "isn" from the drop down menu
@@ -400,87 +383,8 @@ Optional: import data on the command line (see Appendix H)
 1. If you get a prompt for the Projection of each layer, keep the default of WGS 84
 1. Now you should be able to browse and query these tables of osm data just as if they were shapefiles or other tabular GIS data
 
-## Step 9: Using a custom osm2pgsql style file for Humanitarian Data Model tags
-This has not been implemented yet. Contact Dane for help (dane@dbsgeo.com) or Nicolas Chavent (nicolas.chavent@gmail.com). Essentially you will need a custom 'style' file for osm2pgsql. We have plans to provide a sample but it is not quite ready yet. We may just bundle it with the plugin so you can soon update the plugin to get a custom style file
 
 
-
-
-
-
-
-
-
-
-## Step 5: Loading OSM data into QGIS
-
-### Option A: Download Data from OpenStreetMap
-In your QGIS display window, 
-
-1. Zoom into a small area with background data as a reference
-1. (If you are already looking at Haiti in the window, you can use the scale selector in the lower-right hand corner of the QGIS window and select 1:25000)   
-1. [[do you want to get into planet.osm here? A lot of these regions have quite a few nodes....]]
-1. Click the “Download OSM Data” button (it has a blue arrow pointed down) **Note:** this will be in the OSM menu bar buttons on QGIS and not in the right-side OSM panel.
-1. In the "Download OSM data" window, click "Download"
-1. The OSM data should appear in left side “Layers” window and look something like this:
-```
-download points
-download lines
-download polygons
-```
-1. Right click on each layer and select “Save As...”
-1. In the "Save vector layer as..." window, enter the file name in the "Save as" form field
-1. Hit the "Browse" button to make sure you are saving this file in the proper location. **Note:** If you skip this step, QGIS tends to try to save to a system folder where it does not have write permission and you will get an error message.
-1. Click "Save"
-1. Click "OK"
-
-[[This is already set - should this be mentioned? --> Choose the default “WGS84” projection. Should they select to add saved layer to the map?]]
-
-### Option B: load an osm file from the filesystem
-1. Download the haiti extract from geofabrik: http://labs.geofabrik.de/haiti/
-1. You want the 'latest.osm.bz2'
-1. To uncompress the .bz2 file, see Appendix B.
-
-Or
-
-1. Get sample OSM data from the HOT KIT: /data/haiti/00_Haiti_Donnees-OSM_OSM-Data-OSM
-1. Open QGIS
-1. Go to Plugins > OpenStreetMap > Load Osm from file (or click icon on menu bar)
-1. Navigate to the file to load and:
-* Check all tags to add
-* Uncheck "use custom renderer"
-1. Click okay, then the layers should load into QGIS as line, points, and polygons
-
-## Step 6: Export OSM data to a shapefile
-[[aren't the first 3 steps already accomplished in some of the above steps? At least, they seem to be in "Option A" above.]]
-
-1. Now you should have osm files inside QGIS as lines, points, and polygons.
-1. Right click on each of the layers and choose "Save as Shapefile"
-1. Save each shapefile as:
-* points.shp
-* lines.shp
-* polygons.shp
-1. Go to File > New Project 
-1. When prompted in the "Save?" window, click "Discard"
-1. Then, reload the exported shapefiles
-1. Go through the steps at Layers > Add Vector Layer (or drag and drop from windows explorer) for the three shapefiles
-1. getting osm poly-line-points into thematic shp using the query builder from the shapefiles generated in the above step
-attributes: you only see default attributes set up by QGIS [[not sure what this step means]]
-1. [[Note: what I'm seeing on my QGIS display is pretty crazy looking at this stage...]]
-
-# Step 7: Style the data
-1. Right click (or double click) on the shapefile layer [[which one?]] to get access to the properties
-1. Go to the "Labels" tab:
-1. Check "Display labels"
-1. On the "Label Properties" sub-tab, in the "Basic label options" section, set "Field containing label" to "name"
-1. Click "OK"
-1. Experiment with changing the display of lines, points, or polygons with the "Symbology Tab" [[not sure what this has migrated into - no longer a vector layer tab]]
-
-For advanced symbolization ideas see Appendix F [[not sure this adds anything to the discussion above]]
-
-## Step 8: Save to a QGIS project file
-1. Go to File > Save project as..
-1. Save to a file name and location that are easy to remember
 
 
 
