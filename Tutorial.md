@@ -92,7 +92,20 @@ Install from local copy:
 1. Click "OK"
 
 
-## Step 3: Install PostgreSQL and PostGIS
+## Step 3: Install TileMill
+
+Install from local copy:
+
+1. `installers/TileMill-v0.9.1-Setup.exe`
+
+**Or** install from the web:
+
+Grab the latest version from http://mapbox.com/tilemill
+
+Run the installer as an administrator. It will put a TileMill start shortcut in your Start Menu.
+
+
+## Step 4: Install PostgreSQL and PostGIS
 
 Install from local copy:
 
@@ -193,7 +206,7 @@ Password: osm
 
 Note: again, there is no data yet in this database so it is okay if you see a message from QGIS complaining about there being no accessible tables.
 
-## Step 5: Configure the "osm" PostGIS database
+## Step 6: Configure the "osm" PostGIS database
 
 Now we need to do a few customizations to our postgis database to ensure that osm2pgsql works with PostGIS 2.0.
 
@@ -276,7 +289,7 @@ To add to your database do:
 
 
 
-## Step 5: Install osm2pgsql
+## Step 7: Install osm2pgsql
 
 Osm2pgsql is included in the "HOTOSM Installer"
 
@@ -294,7 +307,7 @@ Download the "HOT_Installer" from: https://github.com/hotosm/installer/downloads
 For downloading and installing osm2pgsql manually see Appendix F.
 
 
-## Step 6: Install the OSM Tools Plugin for QGIS
+## Step 8: Install the OSM Tools Plugin for QGIS
 
 If online, use the following steps.
 If offline skip to the offline installation section below.
