@@ -3,6 +3,8 @@
 
 * edit pass to describe the creation of an osm_template db (with all the patched stuff for osm2pgsql), and the instructions for how to create new import database from that, as a template.
 
+* test using normal user for running postgres (rather than postgres user) - update docs if it works
+
 * tutorial needs writeup: tilemill csv tutorial
 
 * tutorial needs writeup: using postgis 2.0 shape importer
