@@ -162,6 +162,13 @@ PostGIS Install Details
 1. Click "Close" on the "Installation Complete" window.
 1. If you're in the Stack Builder, click "Finish." If using the standalone installer, you won't need this step.
 
+---
+
+**Troubleshooting**
+
+If you encounter an error when creating the database involving other connections or users, right click on the other databases in pgAdmin and select disconnect.
+
+---
 
 Verify PostgreSQL and PostGIS installation success:
 
@@ -177,7 +184,10 @@ Verify PostgreSQL and PostGIS installation success:
 1. Click on the "+" sign next to the "Extensions" icon
 1. If you see the items "postgis" and "postgis_topology" listed under the extensions, congrats! PostGIS 2.0 is installed.
 
+---
+
 **Troubleshooting**
+
 If on Windows Vista or Windows 7, and your local account is not an administrator, you may need to give the "postgres" user administration privileges
 Otherwise you will may see errors about "permission denied" when trying to start the server.
 
@@ -192,6 +202,8 @@ Otherwise you will may see errors about "permission denied" when trying to start
 1. Now you may need to restart your machine to trigger the PostgreSQL Server to restart.
 
 If you get an error about access denied, then go back and repeat the above user account steps
+
+---
 
 ### Connect to your (empty) PostGIS database from within QGIS
 
