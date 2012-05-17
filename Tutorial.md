@@ -4,11 +4,13 @@ This guide is intended to demonstrate basic usage of Natural Earth data and Open
 
 QGIS is a free desktop GIS program with features similar to ArcMap.
 
-PostGIS adds GIS functions to the PostgreSQL database. Will get OSM data into it using the osm2pgsql.
+TileMill is a cartography design studio that runs on both the desktop and web.
 
-TileMill is a cartography design studio.
+PostGIS adds GIS functions to the PostgreSQL database.
 
-We choose these tools mainly because they have easy installers for windows. But, for details more on the "why" of these tools see: http://sproke.blogspot.com/2012/02/game-changer-open-source-mapping-in.html
+We will get OSM data into PostGIS using the osm2pgsql importer.
+
+We chose these tools because they have easy installers for windows, but also for their functionality. For more on the "why" behind these tools see: http://sproke.blogspot.com/2012/02/game-changer-open-source-mapping-in.html
 
 
 # Table of Contents
@@ -18,18 +20,22 @@ We choose these tools mainly because they have easy installers for windows. But,
 1. Appendices
 1. References
 
-## Design decisions
+## Advanced FAQ
 
-Advanced users may ask "why not use the 'OpenStreetMap' plugin for QGIS?" instead of the approach detailed below that recommends `osm2pgsql` to import OSM data into PostGIS using the 'OSM Tools' plugin.
+Advanced or curious users may wonder:
 
-The reasons are:
+Q: Why not use the 'OpenStreetMap' plugin for QGIS? instead of the approach detailed below that recommends `osm2pgsql` to import OSM data into PostGIS using the 'OSM Tools' plugin.
 
- * The authors have found the 'OpenStreetMap' plugin quite unstable/buggy (hopefully this is fixed now)
- * osm2pgsql supports importing custom tags (through the use of a style file), which is critical for humanitarian and other uses of OSM data that leverage custom tags
- * osm2pgsql is the main tool to import OSM data by the most users worldwide, so using its schema can be beneficial, for example to work with style templates like: https://github.com/mapbox/osm-bright
- * imposm is another great, widely used tool, but it does not (at this time) work on windows
+A: The reasons are:
 
-Advanced users may ask "why not use some command line tools like ogr2ogr and gdal_translate"? These are great tools, but we aim for avoiding any command line usage in this tutorial. If/when this tutorial demands their functionality, we'll use them through the QGIS interface.
+ * The authors have previously found the 'OpenStreetMap' plugin quite unstable/buggy (hopefully this is fixed now).
+ * osm2pgsql supports importing custom tags (through the use of a style file), which is critical for humanitarian and other uses of OSM data that leverage custom tags.
+ * osm2pgsql is the main tool to import OSM data by the most users worldwide, so using its schema can be beneficial, for example to work with style templates like: https://github.com/mapbox/osm-bright.
+ * imposm is another great, widely used tool, but it does not (at this time) work on windows.
+
+Q: Why not show how to use command line tools like ogr2ogr and gdal_translate?
+
+A: These are great tools, but we aim for avoiding any command line usage in this tutorial. If/when this tutorial demands their functionality, we'll document how to use them through the QGIS interface.
 
 
 # Installing the Tools
@@ -260,7 +266,7 @@ To add to your database do:
 1. Browse to the `data/900913.sql` file and select it
 1. Click "Open"
 1. Click on the "Execute Query" button (it looks like a green triangle pointed to the right or a green "Play" icon)
-1. The "Output pnae" should display a message that reads "Query returned succesfully...."
+1. The "Output pane" should display a message that reads "Query returned successfully...."
 1. Close the "Query" window
 
 
